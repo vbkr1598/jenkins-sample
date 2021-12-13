@@ -19,17 +19,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <build>
-    <executions>
-      <execution>
-    <id>default-prepare-agent</id>
-    <goals>
-        <goal>prepare-agent</goal>
-    </goals>
-    <configuration>
-        <destFile>${project.build.directory}/jacoco-ut.exec</destFile>
-    </configuration>
-</execution>
-      </executions>
+    
     <pluginManagement>
       <plugins>
         <plugin>
@@ -44,6 +34,17 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <executions>
+      <execution>
+    <id>default-prepare-agent</id>
+    <goals>
+        <goal>prepare-agent</goal>
+    </goals>
+    <configuration>
+        <destFile>${project.build.directory}/jacoco-ut.exec</destFile>
+    </configuration>
+</execution>
+      </executions>
     <plugins>
       <plugin>
         <!-- Build an executable JAR -->
